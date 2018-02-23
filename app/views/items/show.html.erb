@@ -1,0 +1,15 @@
+<div class="show container" > 
+  <div class="show_box"> 
+    <p class="title">Title :<%= @item.title %> </p>
+    <p class="duedate">Due Date : <%= @item.duedate %></p>
+    <p class="description">Description :<%= simple_format(@item.description) %></p>
+    <p class="note"> Note : <%= @item.note %></p>
+    <%= image_tag @item.file_location.url, size: "250x250", class: "img-thumbnail"%>
+  </div>
+
+  <div class="show_btn", margin= 20*20> 
+    <%=link_to 'Back to index', items_path, class: 'btn btn-default'  %>
+    <%=link_to 'Edit', edit_item_path(@item), class: 'btn btn-default'  %>
+  </div>
+
+</div>
